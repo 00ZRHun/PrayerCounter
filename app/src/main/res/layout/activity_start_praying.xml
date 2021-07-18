@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartPrayingActivity">
+
+    <!-- 1st col -->
+    <TextView
+        android:id="@+id/textViewHelloXXX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello Hun Zu Rong"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="35dp"
+
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 2nd col -->
+    <TextView
+        android:id="@+id/textViewInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:text="Click on the Button when you complete an iteration of your prayer"
+        android:textSize="25dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewHelloXXX"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 3rd col -->
+    <Button
+        android:id="@+id/buttonClickMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Me"
+        android:textSize="25dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:padding="50dp"
+        android:background="@drawable/button_bg_round"
+        app:layout_constraintTop_toBottomOf="@id/textViewInstruction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <!-- 4th col -->
+    <TextView
+        android:id="@+id/textViewCurrentCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Count: 0"
+        android:textSize="25dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/buttonClickMe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 5th col -->
+    <TextView
+        android:id="@+id/textViewTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:text="Timer: Y secs"
+        android:textSize="25dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewCurrentCount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 6yh col -->
+    <!-- ??? -> android:onClick="startPraying" -->
+    <Button
+        android:id="@+id/buttonEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End"
+        android:inputType="textCapWords"
+        android:textSize="20dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_margin="15dp"
+        android:onClick="endPraying"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
